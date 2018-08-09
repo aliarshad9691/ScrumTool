@@ -1,0 +1,49 @@
+{
+  "name": "VQode_Management",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@angular/animations": "^6.0.5",
+    "@angular/cdk": "^6.4.3",
+    "@angular/forms": "6.0.2",
+    "@angular/material": "^6.4.3",
+    "@angular/platform-browser": "6.0.2",
+    "@angular/platform-browser-dynamic": "6.0.2",
+    "@angular/router": "6.0.2",
+    "@babel/runtime": "^7.0.0-beta.55",
+    "core-js": "2.5.6",
+    "fibers": "^3.0.0",
+    "meteor-node-stubs": "0.4.1",
+    "meteor-rxjs": "0.4.11",
+    "rxjs": "6.1.0",
+    "rxjs-compat": "6.1.0",
+    "systemjs": "^0.21.4",
+    "zone.js": "0.8.26"
+  },
+  "devDependencies": {
+    "@angular/common": "^6.0.2",
+    "@angular/compiler": "^6.0.2",
+    "@angular/compiler-cli": "^6.0.2",
+    "@angular/core": "^6.0.2",
+    "@types/chai": "4.1.2",
+    "@types/meteor": "1.4.13",
+    "@types/mocha": "2.2.48",
+    "@types/sinon": "4.3.0",
+    "chai": "4.1.2",
+    "phantomjs-prebuilt": "2.1.16",
+    "sinon": "4.4.6",
+    "typescript": "^3.0.1"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.ts",
+      "server": "server/main.ts"
+    },
+    "testModule": "tests/main.js"
+  }
+}
