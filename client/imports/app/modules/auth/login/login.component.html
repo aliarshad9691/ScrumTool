@@ -1,0 +1,39 @@
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="mat-error error_holder">{{error}} &nbsp;</div>
+<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+    <div class="d-flex">
+
+        <mat-form-field class="mat-input-fields">
+            <input matInput
+                   placeholder="Enter your email"
+                   name="email"
+                   style="-webkit-app-region: no-drag"
+                   formControlName="Email">
+            <mat-error *ngIf="signUpForm.invalid">{{getErrorMessage()}}</mat-error>
+            <mat-icon matSuffix>alternate_email</mat-icon>
+        </mat-form-field>
+
+
+    </div>
+    <div class="d-flex">
+
+        <mat-form-field class="mat-input-fields">
+            <input matInput
+                   placeholder="Enter your password"
+                   formControlName="Password"
+                   style="-webkit-app-region: no-drag"
+                   name="password"
+                   [type]="hide ? 'password' : 'text'">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </mat-form-field>
+
+    </div>
+    <div class="d-flex">
+        <button mat-raised-button class="mat-login-button" style="-webkit-app-region: no-drag" [disabled]="isLogingIn">{{isLogingIn?"Please Wait": "LOGIN"}}</button>
+    </div>
+</form>
+<div class="j-content">
+    <a routerLink="/auth/login/forgot" style="-webkit-app-region: no-drag">Lost your password?</a>
+</div>
+<div class="border"></div>

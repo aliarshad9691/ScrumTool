@@ -1,20 +1,23 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
+    MatButtonModule,
     MatCardModule, MatDatepickerModule, MatFormFieldModule, MatIconModule, MatInputModule, MatListModule,
     MatNativeDateModule,
-    MatSidenavModule,
+    MatSidenavModule, MatSnackBarModule,
     MatTabsModule,
     MatToolbarModule
 } from "@angular/material";
-import { NavComponent } from "./nav/nav.component";
-import { LayoutModule } from "@angular/cdk/layout";
+import {NavComponent} from "./nav/nav.component";
+import {LayoutModule} from "@angular/cdk/layout";
+import {UtilsService} from "./services/uitls.service";
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
+        ReactiveFormsModule,
         LayoutModule,
         MatToolbarModule,
         MatSidenavModule,
@@ -24,11 +27,31 @@ import { LayoutModule } from "@angular/cdk/layout";
         MatDatepickerModule,
         MatFormFieldModule,
         MatNativeDateModule,
-        MatInputModule
+        MatInputModule,
+        MatSnackBarModule,
+        MatButtonModule
     ],
     declarations: [NavComponent],
-    exports: [CommonModule, FormsModule, MatToolbarModule, MatTabsModule, MatSidenavModule, MatListModule, MatIconModule, NavComponent, LayoutModule, MatCardModule, MatDatepickerModule, MatFormFieldModule, MatNativeDateModule, MatInputModule],
-    providers: [MatDatepickerModule]
+    exports: [
+        CommonModule,
+        FormsModule,
+        MatToolbarModule,
+        MatTabsModule,
+        MatSidenavModule,
+        MatListModule,
+        MatIconModule,
+        NavComponent,
+        LayoutModule,
+        MatCardModule,
+        MatDatepickerModule,
+        MatFormFieldModule,
+        MatNativeDateModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatSnackBarModule,
+        MatButtonModule
+    ],
+    providers: [MatDatepickerModule, UtilsService]
 })
 export class SharedModule {
 }

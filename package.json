@@ -2,7 +2,7 @@
   "name": "VQode_Management",
   "private": true,
   "scripts": {
-    "start": "meteor run",
+    "start": "MONGO_URL=mongodb://localhost:27017/scrum MAIL_URL=smtp://postmaster%40mail.vqode.com:7e0b203dabaf09a1db4be6e8bd95dccf@smtp.mailgun.org:587 meteor run",
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
     "visualize": "meteor --production --extra-packages bundle-visualizer"
@@ -18,8 +18,8 @@
     "@angular/platform-browser": "~7.1.0",
     "@angular/platform-browser-dynamic": "~7.1.0",
     "@angular/router": "~7.1.0",
-    "bootstrap-4-grid": "^2.4.1",
     "@babel/runtime": "^7.0.0-beta.55",
+    "bootstrap-4-grid": "^2.4.1",
     "core-js": "2.5.6",
     "fibers": "^3.0.0",
     "meteor-node-stubs": "0.4.1",
@@ -27,10 +27,11 @@
     "rxjs": "6.1.0",
     "rxjs-compat": "6.1.0",
     "systemjs": "^0.21.4",
+    "underscore": "^1.9.1",
     "zone.js": "0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.11.0",
+    "@angular-devkit/build-angular": "^0.12.1",
     "@angular/cli": "~7.1.4",
     "@angular/compiler-cli": "~7.1.0",
     "@angular/language-service": "~7.1.0",

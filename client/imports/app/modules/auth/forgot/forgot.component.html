@@ -1,0 +1,28 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="mat-error error_holder">{{error}} &nbsp;</div>
+<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+    <div class="d-flex">
+
+        <mat-form-field class="mat-input-fields">
+            <input matInput
+                   placeholder="Enter your email"
+                   name="email"
+                   style="-webkit-app-region: no-drag"
+                   formControlName="Email"
+            >
+            <mat-error *ngIf="signUpForm.invalid">{{getErrorMessage()}}</mat-error>
+            <mat-icon matSuffix>alternate_email</mat-icon>
+        </mat-form-field>
+
+    </div>
+    <div class="d-flex">
+        <button mat-raised-button class="mat-submit-button" [disabled]="sendingEmail" style="-webkit-app-region: no-drag"> {{sendingEmail?"Please Wait": "SUBMIT"}}</button>
+    </div>
+</form>
+<div class="j-content">
+
+    <a routerLink="/auth/login" style="-webkit-app-region: no-drag">Back to Login</a>
+
+</div>
+<div class="border"></div>
