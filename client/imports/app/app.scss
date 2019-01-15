@@ -1,3 +1,10 @@
+@import "../../../node_modules/bootstrap-4-grid/scss/grid";
+@import "variables";
+
+* {
+  font-family: $font-family;
+}
+
 .no-padding {
   padding: 0px !important;
 }
@@ -78,3 +85,26 @@ textarea {
 .ui-calendar, .ui-autocomplete {
   width: 100%;
 }
+
+h1 {
+  text-align: center;
+  padding: 15px;
+}
+
+h2 {
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+  padding: 7px;
+  text-align: center;
+}
+
+.mat-card {
+  padding: 10px !important;
+  margin: 8px 0;
+  font-size: 14px;
+  font-family: $font-family;
+}
+
+*:focus { outline: none; }

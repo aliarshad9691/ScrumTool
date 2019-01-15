@@ -1,0 +1,13 @@
+<mat-card>
+    <div class="row">
+        <div class="col-md-8">
+            <span *ngIf="!isEdit">Test Task</span>
+            <input *ngIf="isEdit" matInput class="task-inp" placeholder="task..." type="text" value="Test Task"/>
+        </div>
+        <div class="col-md-4 date-holder">
+            <span *ngIf="!isEdit">12/12/2019</span>
+            <input *ngIf="isEdit" matInput [matDatepicker]="picker" placeholder="Choose a date" class="date-inp" (focus)="picker.open()" />
+            <mat-datepicker #picker></mat-datepicker>
+        </div>
+    </div>
+</mat-card>
